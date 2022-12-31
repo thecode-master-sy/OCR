@@ -110,7 +110,7 @@ img {
   top: 50%;
   left: 0;
   width: 100%;
-  height: 0.15em;
+  height: 0.12em;
   transform: translateY(-50%);
   background-color: #ae00fb;
   background-image: linear-gradient(60deg, #ae00fb 0%, #6987f8 100%);
