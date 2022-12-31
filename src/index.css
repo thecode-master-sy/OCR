@@ -1,0 +1,171 @@
+/* page specific utilityclasses*/
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.masked-gradient {
+  color: transparent;
+  background-color: #ae00fb;
+  background-image: linear-gradient(60deg, #ae00fb 0%, #6987f8 100%);
+  background-clip: text;
+  background-size: 20em;
+  background-position: left;
+  animation: gradient 2s ease infinite alternate;
+}
+
+@media screen and (min-width: 45em) {
+  .grid-col-2 {
+    grid-template-columns: 1.5fr 2fr;
+  }
+
+  .second-section .second-column {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .second-section .first-column {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.overlay::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9;
+  transition: all ease 0.5s;
+}
+
+/* page specific layout*/
+.logo {
+  grid-column: 1/4;
+}
+
+.navigation--mobile__container {
+  grid-column: 12;
+}
+
+.navigation--mobile {
+  display: none;
+  top: 0;
+  right: 0;
+  width: min(100%, 25em);
+  height: 100vh;
+  background-color: white;
+  z-index: 12;
+  padding-top: 5em;
+  transition: display ease 0.5s;
+}
+
+.navigation--mobile.show {
+  display: flex;
+}
+
+.navigation--mobile li + li {
+  margin-top: var(--mg-mid);
+}
+.navigation li a {
+  text-decoration: none;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+.cancel {
+  top: 0;
+  right: 0;
+  font-size: 2em;
+}
+
+.btn a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.Hero-section {
+  min-height: 70vh;
+  place-items: center;
+}
+
+@media screen and (min-width: 54em) {
+  .navigation--desktop {
+    --gap: 3em;
+    gap: var(--gap);
+  }
+}
+
+.neon-line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0.25em;
+  transform: translateY(-50%);
+  background-color: #ae00fb;
+  background-image: linear-gradient(60deg, #ae00fb 0%, #6987f8 100%);
+  background-size: 20em;
+  background-repeat: no-repeat;
+  background-position: right;
+  animation: gradient 10s ease infinite alternate;
+}
+
+.inside-app {
+  z-index: 2;
+  padding: 10px;
+}
+
+.inside-app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+}
+
+.choose-img {
+  max-width: 45em;
+}
+
+.faq-file {
+  width: 70px;
+  height: 70px;
+}
+
+.extract-img,
+.copy-text-img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer {
+  border-top: 1px solid var(--clr-neutral-gray);
+  min-height: 20em;
+}
+
+.btn--call-to-action {
+  animation: gradient 2s ease infinite alternate;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}

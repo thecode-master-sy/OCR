@@ -4,11 +4,168 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" intial-scale="1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="module" src="script.js"></script>
     <title>A simple Ocr App</title>
   </head>
 
   <body>
-    <h1>this is a simple ocr app</h1>
-    <a href="textrecognition/index.html">get started</a>
+    <div class="container pd-mid mg-auto position-relative" id="container">
+      <!---- the navigation section -->
+      <nav class="flex justify-space-between">
+        <div class="logo">
+          <h1 class="masked-gradient">Extract</h1>
+        </div>
+
+        <ul class="navigation navigation--desktop text-color align-center">
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="https://github.com/thecode-master-sy/OCR">github repo</a>
+          </li>
+          <li><a href="documentation/">documentation</a></li>
+          <li><a href="support/">support</a></li>
+        </ul>
+
+        <div class="navigation--mobile__container">
+          <span class="hamburger icon block cursor-pointer">
+            <img src="assets/icons/hamburger.svg" />
+          </span>
+
+          <ul
+            class="navigation navigation--mobile flex-direction-column position-fixed pd-inline-large"
+            id="navigation--mobile"
+          >
+            <span class="cancel position-absolute pd-small cursor-pointer"
+              >&times</span
+            >
+            <li><a href="/">Home</a></li>
+            <li>
+              <a href="https://github.com/thecode-master-sy/OCR">github repo</a>
+            </li>
+            <li><a href="documentation/">documentation</a></li>
+            <li><a href="support/">support</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--- the get started section --->
+      <div class="Hero-section grid text-center">
+        <div class="first-column">
+          <h1 class="title--main fs-32 capitalize">
+            Extract text from images with
+            <span class="masked-gradient">Extract.</span>
+          </h1>
+          <p class="mg-top-mid fs-mid">
+            Extract is a simple web tool that enables you to extract text from
+            various kinds of images.
+          </p>
+          <button class="btn btn--call-to-action mg-top-large gradient-animate">
+            <a href="textrecognition/index.html">get started</a>
+          </button>
+        </div>
+      </div>
+
+      <!--- example uses section 1 -->
+      <main class="mg-top-mid">
+        <h3 class="neon-line text-center fs-mid capitalize position-relative">
+          <span class="inside-app position-relative">Inside the app</span>
+        </h3>
+        <div
+          class="mg-top-mid grid grid-col-2 pd-top-large pd-bottom-large"
+          style="--gap: 2.5rem"
+        >
+          <div class="first-column" style="align-self: center">
+            <div class="flex align-center" style="--gap: 2rem">
+              <h2 class="fs-mid text-center">A simple look</h2>
+              <div class="faq-file">
+                <img src="assets/images/faq-file.png" alt="faq-file" />
+              </div>
+            </div>
+
+            <p class="fs-mid--flex mg-top-mid">
+              A simple look of how the app looks inside, the image on the left
+              show where you upload your images, images can either be choosen
+              manually or dragged to the drop zone
+            </p>
+          </div>
+          <div class="second-column choose-img">
+            <img src="assets/images/choose-img.png" alt="choose-img" />
+          </div>
+        </div>
+
+        <div
+          class="second-section grid grid-col-2 mg-top-mid pd-top-large pd-bottom-large"
+          style="--gap: 2.5em"
+        >
+          <div class="first-column" style="align-self: center">
+            <div class="flex align-center">
+              <h2 class="fs-mid">How To Extract Text</h2>
+
+              <div class="extract-img">
+                <img
+                  src="assets/images/juicy-text-sticker-1.png"
+                  alt="martina-frame-with-text"
+                />
+              </div>
+            </div>
+            <p class="fs-mid--flex mg-top-mid">
+              For users to extract the text from the image, just click the ocr
+              and button!
+            </p>
+          </div>
+
+          <div class="second-column">
+            <img src="assets/images/ocr-button.png" alt="example-extract" />
+          </div>
+        </div>
+
+        <div
+          class="third-section grid grid-col-2 mg-top-mid pd-top-large pd-bottom-large"
+          style="--gap: 2.5rem"
+        >
+          <div class="first-column" style="align-self: center">
+            <div class="flex" style="--gap: 2.5rem">
+              <h2 class="fs-mid">Copy text in just a Click</h2>
+
+              <div class="copy-text-img">
+                <img
+                  src="assets/images/silky-icon-copy.png"
+                  alt="silky-icon-copy"
+                />
+              </div>
+            </div>
+
+            <p class="fs-mid--flex mg-top-mid">
+              The image on the left show where the user can copy the ocr text
+              just by clicking the copy icon to more about the app and the
+              upcoming features, vist the <a href="#">Documentation</a>
+            </p>
+          </div>
+
+          <div class="second-column">
+            <img src="assets/images/extracted-text.png" alt="extract-text" />
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer flex justify-end align-center">
+        <div class="quote">
+          <p>
+            "remember fellows not to give up!! It took 36 years for Argentina to
+            win another world cup Messi is the GOAT"
+          </p>
+          <p class="mg-top-mid">
+            By Nwaegerue Chinemerem Chibuenyi (@thecodemaster)
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <div
+      class="copywright text-center pd-mid"
+      style="border-top: 1px solid var(--clr-neutral-gray)"
+    >
+      <p>@copyright 2022</p>
+    </div>
   </body>
 </html>

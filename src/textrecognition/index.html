@@ -27,6 +27,7 @@
               <div class="">
                 <form
                   class="form flex justify-center align-center flex-direction-column"
+                  style="--gap: 1.5rem"
                 >
                   <div
                     class="rounded-downloader animate drop-zone__animate flex justify-center align-center"
@@ -49,10 +50,8 @@
                     />
                   </div>
                   <input type="file" class="hidden-input" hidden />
-                  <p class="mg-top-large">Drag and drop image to upload or</p>
-                  <button class="btn mg-top-mid choose-files">
-                    Choose Image
-                  </button>
+                  <p>Drag and drop image to upload or</p>
+                  <button class="btn choose-files">Choose Image</button>
                 </form>
 
                 <div class="preview position-relative mg-top-mid border">
@@ -68,7 +67,7 @@
           </div>
 
           <div
-            class="ocr--text text-center pd-mid flex justify-center equal__items flex-direction-column"
+            class="ocr--text text-center pd-mid flex justify-center equal__items flex-direction-column align-center"
           >
             <p class="confidence mg-bottom-small"></p>
 
@@ -101,7 +100,7 @@
       </div>
 
       <div class="flex justify-center mg-top-large">
-        <button class="btn btn--ocr">ocr</button>
+        <button class="btn btn--ocr btn--call-to-action">ocr</button>
       </div>
     </div>
 
